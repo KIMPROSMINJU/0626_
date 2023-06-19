@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var cnt = 0;
+            var img = document.getElementById("image");
+            var frames = ["01.png", "02.png", "03.png", "04.png", "05.png", "06.png", "07.png", "08.png"];
+
+            setInterval(function(){
+                img.src = "run/" + frames[cnt++ % frames.length];
+            }, 500/frames.length);
+        }
+    </script>
+</head>
+<body>
+    <img id="image">
+</body>
+</html>
